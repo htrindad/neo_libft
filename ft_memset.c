@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 18:23:38 by htrindad          #+#    #+#             */
-/*   Updated: 2024/06/13 18:29:13 by htrindad         ###   ########.fr       */
+/*   Updated: 2024/06/16 18:33:08 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	*ft_memset(void *str, int c, size_t n)
 	size_t	i;
 	uint8_t	*ptr;
 
-	i = 0;
 	ptr = (uint8_t *)str;
 	if (ptr == NULL)
 		return ;
