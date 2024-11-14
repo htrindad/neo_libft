@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/13 14:24:19 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/23 19:41:13 by htrindad         ###   ########.fr       */
+/*   Created: 2024/04/23 17:58:01 by htrindad          #+#    #+#             */
+/*   Updated: 2024/04/23 18:22:21 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (!c)
-		return ((char *)&s[ft_strlen(s)]);
-	while (*s)
+	char	*ret;
+	size_t	i;
+
+	if (!s || !len || start > ft_strlen(s))
+		return (ft_strdup(""));
+	i = 0;
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
+	ret = malloc(sizeof(char) * (len + 1));
+	if (ret == NULL)
+		return (NULL);
+	while (len)
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
+		ret[i++] = s[start++];
+		len--;
 	}
-	return (NULL);
+	ret[i] = 0;
+	return (ret);
 }

@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/13 18:09:43 by htrindad          #+#    #+#             */
-/*   Updated: 2024/06/13 18:10:21 by htrindad         ###   ########.fr       */
+/*   Created: 2024/04/13 18:12:21 by htrindad          #+#    #+#             */
+/*   Updated: 2024/04/18 19:32:02 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+int	ft_isdigit(int n)
 {
-	return (c >= '0' && c <= '9');
+	return (n > 47 && n < 58);
 }

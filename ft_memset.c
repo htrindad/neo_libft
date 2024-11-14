@@ -5,26 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/13 18:23:38 by htrindad          #+#    #+#             */
-/*   Updated: 2024/06/16 18:33:08 by htrindad         ###   ########.fr       */
+/*   Created: 2024/04/13 18:13:32 by htrindad          #+#    #+#             */
+/*   Updated: 2024/04/13 18:13:34 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *str, int c, size_t n)
+void	*ft_memset(void *str, int c, size_t t)
 {
-	size_t	i;
-	uint8_t	*ptr;
+	size_t			i;
+	unsigned char	*ptr;
 
-	ptr = (uint8_t *)str;
-	if (ptr == NULL)
-		return ;
+	ptr = (unsigned char *)str;
 	i = 0;
-	while (i < n)
-	{
-		ptr[i++] = (uint8_t)c;
-		ptr++;
-	}
-	return (ptr);
+	while (i < t)
+		ptr[i++] = (unsigned char)c;
+	return (str);
 }

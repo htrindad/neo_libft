@@ -1,29 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/13 15:50:43 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/13 16:01:20 by htrindad         ###   ########.fr       */
+/*   Created: 2024/04/16 22:02:13 by htrindad          #+#    #+#             */
+/*   Updated: 2024/04/17 15:16:05 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+static int	ft_char_in_set(char c, char const *set)
 {
 	size_t	i;
 
 	i = 0;
-	if (!size)
-		return (ft_strlen(src));
-	while (src[i] && i < size - 1)
+	while (set[i])
 	{
-		dst[i] = src[i];
+		if (set[i] == c)
+			return (1);
 		i++;
 	}
-	dst[i] = 0;
-	return (ft_strlen(src));
+	return (0);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	char	*str;
+	size_t	s;
+	size_t	e;
+
+	if (!s1 || !set)
+		return (NULL);
+	s = 0;
+	e = ft_strlen(s1);
+	while (s1[s] && ft_char_in_set(s1[s], set))
+		s++;
+	while (e > s && ft_char_in_set(s1[e - 1], set))
+		e--;
+	str = ft_substr(s1, s, e - s);
+	if (str == NULL)
+		return (NULL);
+	return (str);
 }

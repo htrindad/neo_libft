@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/13 19:34:33 by htrindad          #+#    #+#             */
-/*   Updated: 2024/06/13 19:35:07 by htrindad         ###   ########.fr       */
+/*   Created: 2024/04/13 14:22:03 by htrindad          #+#    #+#             */
+/*   Updated: 2024/04/13 14:22:51 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
-	if (c >= 'A' && c <= 'Z')
+	if (c > 64 && c < 91)
 		return (c + 32);
 	return (c);
 }

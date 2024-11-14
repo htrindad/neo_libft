@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/13 18:36:48 by htrindad          #+#    #+#             */
-/*   Updated: 2024/06/13 18:41:02 by htrindad         ###   ########.fr       */
+/*   Created: 2024/04/13 18:13:25 by htrindad          #+#    #+#             */
+/*   Updated: 2024/04/13 18:13:26 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	uint8_t	*tmp1;
-	uint8_t	*tmp2;
+	unsigned char	*tmp1;
+	unsigned char	*tmp2;
 
 	if (!n)
 		return (dest);
-	tmp1 = (uint8_t *)dest;
-	tmp2 = (uint8_t *)src;
+	tmp1 = (unsigned char *)dest;
+	tmp2 = (unsigned char *)src;
 	if (dest < src)
 		return (ft_memcpy(dest, src, n));
 	if (dest > src)

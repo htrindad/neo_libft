@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/13 18:20:47 by htrindad          #+#    #+#             */
-/*   Updated: 2024/06/13 18:22:19 by htrindad         ###   ########.fr       */
+/*   Created: 2024/04/13 18:14:00 by htrindad          #+#    #+#             */
+/*   Updated: 2024/04/22 17:28:50 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char cosnt *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 

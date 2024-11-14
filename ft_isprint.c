@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/13 18:18:26 by htrindad          #+#    #+#             */
-/*   Updated: 2024/06/13 18:19:36 by htrindad         ###   ########.fr       */
+/*   Created: 2024/04/13 18:12:59 by htrindad          #+#    #+#             */
+/*   Updated: 2024/04/18 19:31:59 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	return (c >= ' ' && c <= '~');
+	return (c > 31 && c < 127);
 }
