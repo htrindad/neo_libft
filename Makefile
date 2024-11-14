@@ -37,10 +37,10 @@ bonus: $(OBJS) $(BONUS_OBJ)
 	ar rcs $(NAME) $(OBJS) $(BONUS_OBJ)
 
 clean:
-	rm -rf $(OBJS)
+	rm -f $(OBJS)
 
 clean_bonus:
-	rm -rf $(BONUS_OBJ) $(OBJS)
+	rm -f $(BONUS_OBJ) $(OBJS)
 
 fclean: clean clean_bonus
 	rm -f $(NAME)
